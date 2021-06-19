@@ -112,7 +112,7 @@ a presence of semantic issues.
 
 ## Implementations
 
-## Conclusions
+## Conclusion
 
 ## References
 
