@@ -14,7 +14,7 @@ This section concerns a history of an Oracle's Hotstop JVM. The first release of
 When talking about JVM, it makes sense to present its general structure. The digram below
 perfectly depicts the latter.
 
-<img src="assets/JVM-Model.jpg" width="900" height="700">
+<img src="assets/JVM-Model.jpg" width="650" height="500">
 
 The java code comes a long way before being executed on a host machine. The whole 
 pipeline consists of many stages, involving various transformations, optimizations, and some 
@@ -30,7 +30,35 @@ the details of each part in JVM execution pipeline.
 Before being fed to the loading stage java code gets translated to 
 .class file. For instance, let's take the following Kotlin program
 
-TODO: Include example images
+```kotlin
+ package src
+
+ fun main() {
+     val dummy = 432
+     localFunction(dummy)
+ }
+
+ fun localFunction(dummy: Int){
+     println(dummy)
+ }
+
+```
+Here's a corresponding .class file
+
+```kotlin
+// IntelliJ API Decompiler stub source generated from a class file
+// Implementation of methods is not available
+
+package src
+
+public fun localFunction(dummy: kotlin.Int): kotlin.Unit { /* compiled code */ }
+
+public fun main(): kotlin.Unit { /* compiled code */ }
+
+```
+
+As you can see, .class file defines components in a more explicit manner.
+
 
 ### Loading
 Before diving into structure of a class loader, it makes sense to 
