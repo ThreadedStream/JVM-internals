@@ -14,9 +14,9 @@ This section concerns a history of an Oracle's Hotstop JVM. The first release of
 When talking about JVM, it makes sense to present its general structure. The digram below
 perfectly depicts the latter.
 
-<img src="assets/JVM-Model.jpg" width="600" height="500">
+<img src="assets/JVM-Model.jpg" width="900" height="700">
 
-The java program comes a long way before being executed on a host machine. The whole 
+The java code comes a long way before being executed on a host machine. The whole 
 pipeline consists of many stages, involving various transformations, optimizations, and some 
 heuristics making a final program run faster. JVM maintains a stack(or rather, stacks)
 to which immediate values and references are pushed and popped from. Each thread has its own
@@ -34,12 +34,10 @@ TODO: Include example images
 
 ### Loading
 Before diving into structure of a class loader, it makes sense to 
-define what class loader is itself. Basically, the name readily produces a valid
+define what class loader does. Basically, the name readily produces a valid
 definition, that is a class loader is responsible for loading classes at runtime.
 Thanks to class loader, JVM does not have to bother about underlying complexity 
-of a file system on the host machine. The loading stage's comprised of 3 divisions, namely a Bootstrap Class Loader,
-Extension Class Loader, and finally an Application Class Loader. <br>
-The process of finding classes is based upon a delegation concept.
+of a file system on the host machine. The process of finding classes is based upon a delegation concept.
 It means that a child class will delegate searching to a parent class prior
  to doing it on its own. <br>
 
@@ -50,7 +48,7 @@ The principle of delegation is not the only one the JVM class loader conforms to
 The principles of visibility and uniqueness also encompass a set of 
 class loading laws. Visibility principle states that child class loader is allowed to see 
 all classes loaded by a parent class loader, but not vice versa, whereas the uniqueness
-principle states that class is loaded only once. If not class is found, NoClassDefFoundError or ClassNotFoundException is 
+principle states that class is loaded only once. If class isn't found, NoClassDefFoundError or ClassNotFoundException is 
 thrown. <br>
 
 A loading facility has 3 divisions, namely Bootstrap Class Loader, Extension Class Loader, and 
@@ -73,11 +71,11 @@ This is a primary class loader, which is responsible for loading
 JDK internal classes (rt.jar), and other core libraries located under
 $JAVA_HOME/jre/lib directory. For instance, it's responsible for loading 
 ClassLoader class which is being inherited by custom class loaders, and it actually
-makes sense, since ClassLoader is also a class, and it needs to be loaded. 
+makes sense, since ClassLoader is also a class, hence it needs to be loaded. 
 
 ### Linking
 Similar to loading, the linking stage's also comprised of 3 parts: Verifying, Preparing, and Resolving.
-The process of verifying consists of checking a class of interface against
+The process of verifying consists of checking a class or interface against
 a presence of semantic issues.
 
 ## Bytecode, Garbage Collection, and Memory Management
