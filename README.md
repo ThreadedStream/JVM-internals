@@ -107,6 +107,8 @@ The process of verifying consists of checking a class or interface against
 a presence of semantic issues.
 
 ## Bytecode, Garbage Collection, and Memory Management
+If you've ever written something in compiled language (C, C++), you already know that written code should first be translated into its 
+lower level equivalent, i.e machine(object) code. The latter is what processor understands and hence is able to execute. 
 
 ## Optimizations, benchmarks
 
