@@ -126,7 +126,7 @@ Articles
 - https://dzone.com/articles/demystify-java-class-loading
 
 Videos
+- https://www.youtube.com/watch?v=UwB0OSmkOtQ (Oldie, but very useful)
 
-Coming soon...
 
 I'll be filling up these as i learn something new. So, that's it for now :)
