@@ -188,8 +188,8 @@ JVM's heap consists of young and old generations. Young generation is further di
 Eden space is designed to hold freshly allocated objects (initialized with new), whereas Survivor space 
 holds objects not reclaimed during garbage collection in Eden space. 
 An old generation holds objects, lifetime of which has hit a certain threshold.
-A visual below greatly depicts the structure of JVM heap.
-<img src="assets/jvm_heap_java8.png" width="600px" height="300px">
+A visual below greatly depicts the structure of JVM heap. <br>
+<img src="assets/jvm_heap_java8.png" width="800px" height="400px"><br><br>
 You might as well noticed a space I haven't told about - the Metaspace (actually, it's not a part of the heap).
 Formerly known as a Permanent generation space (PermGen), the Metaspace has brought around many decent 
 features. 
